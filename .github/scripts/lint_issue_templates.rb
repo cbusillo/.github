@@ -1,6 +1,9 @@
 require 'yaml'
 
-paths = IO.popen(['git', 'ls-files', '-z', '--', '.github/ISSUE_TEMPLATE'], &:read).split("\0")
+Dir.chdir(File.expand_path('../..', __dir__))
+tracked = IO.popen(['git', 'ls-files', '-z', '--', '.github/ISSUE_TEMPLATE'], &:read)
+abort 'git ls-files failed' unless $?.success?
+paths = tracked.split("\0")
 paths.each do |path|
   text = File.read(path)
   if File.extname(path) == '.md'
@@ -18,6 +21,8 @@ paths.each do |path|
         abort "#{path}: blank_issues_enabled must be true or false"
       end
     end
+  else
+    next
   end
   puts "Valid: #{path}"
 rescue Psych::Exception => error
