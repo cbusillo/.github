@@ -4,7 +4,7 @@ about: Ask for something new.
 ---
 
 ### What would you like to add?
-Tell us what you need. For example: a new page for accessories.
+Tell us what you need. For example: a way to search a list.
 
 ### What should it do?
 Tell us how you would use it and how it would help.

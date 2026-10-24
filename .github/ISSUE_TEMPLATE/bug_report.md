@@ -4,7 +4,7 @@ about: Tell us about something that is not working.
 ---
 
 ### What went wrong?
-Tell us what happened. Add a page link if you have one.
+Tell us what happened. Add a link if you have one.
 
 ### How can we see it?
 List the steps you took.
@@ -15,8 +15,8 @@ Tell us what you expected.
 ### Screenshots
 Add a screenshot if it helps.
 
-### Your device and browser
-For example: iPhone with Safari, or Windows with Chrome.
+### Your device and app or browser
+For example: iPhone with Safari, or Windows with the app name.
 Add the version if you know it.
 
 ### Anything else?
