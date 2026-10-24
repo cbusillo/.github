@@ -1,0 +1,17 @@
+name: Issue templates
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - 'launchplane/train/**'
+permissions:
+  contents: read
+jobs:
+  issue-templates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - run: ruby .github/scripts/lint_issue_templates.rb
